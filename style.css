@@ -859,10 +859,16 @@ body :is(h1, h2, p, .theme-btn, .cover-label, .badge, .hearts, .footer) {
     font-size: 0.82rem;
 }
 
-.friendship-box {
+.card-message-boxes {
     position: relative;
     z-index: 1;
     margin-top: auto;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+
+.friendship-box {
     width: 100%;
     padding: 13px 16px;
     border: 1px solid var(--button-border);

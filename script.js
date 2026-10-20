@@ -7,6 +7,9 @@ const downloadButton = document.getElementById('downloadButton');
 const openFriendshipMessages = document.getElementById('openFriendshipMessages');
 const friendshipDialog = document.getElementById('friendshipDialog');
 const closeFriendshipMessages = document.getElementById('closeFriendshipMessages');
+const openBestFriendsMessages = document.getElementById('openBestFriendsMessages');
+const bestFriendsDialog = document.getElementById('bestFriendsDialog');
+const closeBestFriendsMessages = document.getElementById('closeBestFriendsMessages');
 const actionStatus = document.getElementById('actionStatus');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const encouragementMessages = [
@@ -178,6 +181,11 @@ if (card) {
 if (friendshipDialog instanceof HTMLDialogElement) {
   openFriendshipMessages?.addEventListener('click', () => friendshipDialog.showModal());
   closeFriendshipMessages?.addEventListener('click', () => friendshipDialog.close());
+}
+
+if (bestFriendsDialog instanceof HTMLDialogElement) {
+  openBestFriendsMessages?.addEventListener('click', () => bestFriendsDialog.showModal());
+  closeBestFriendsMessages?.addEventListener('click', () => bestFriendsDialog.close());
 }
 
 if (celebrateButton && confettiLayer) {

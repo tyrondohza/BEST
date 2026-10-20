@@ -60,9 +60,14 @@
                         <span>Love you lots</span>
                     </div>
 
-                    <button class="friendship-box" id="openFriendshipMessages" type="button" aria-haspopup="dialog" aria-controls="friendshipDialog">
-                        Tap here for a little exam encouragement 💌
-                    </button>
+                    <div class="card-message-boxes">
+                        <button class="friendship-box" id="openFriendshipMessages" type="button" aria-haspopup="dialog" aria-controls="friendshipDialog">
+                            Tap here for a little exam encouragement 💌
+                        </button>
+                        <button class="friendship-box best-friends-box" id="openBestFriendsMessages" type="button" aria-haspopup="dialog" aria-controls="bestFriendsDialog">
+                            Tap here to see why we're best friends 💖
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,6 +95,22 @@
                 <p>No matter what, I'm already proud of you. You've got this, and I'll be cheering you on every step of the way! 🍀</p>
             </div>
             <button class="action-btn friendship-dialog-close" id="closeFriendshipMessages" type="button">Close 💖</button>
+        </div>
+    </dialog>
+
+    <dialog class="friendship-dialog" id="bestFriendsDialog" aria-labelledby="bestFriendsDialogTitle">
+        <div class="friendship-dialog-content">
+            <p class="friendship-dialog-kicker">My favorite kind of friendship</p>
+            <h2 id="bestFriendsDialogTitle">Why We're Best Friends 💖</h2>
+            <div class="friendship-messages">
+                <p>You make even the most ordinary days more fun just by being you. 😄</p>
+                <p>We can laugh together, be silly, and make memories I wouldn't trade for anything. ✨</p>
+                <p>I can trust you with my thoughts and count on you to be there when it matters. 🫶</p>
+                <p>You accept me as I am, and I hope you know I'll always do the same for you. 💛</p>
+                <p>We've got each other's backs through the good days and the hard ones. 🤝</p>
+                <p>You're not just my best friend—you're one of my favorite people in the whole world. Love you! 💕</p>
+            </div>
+            <button class="action-btn friendship-dialog-close" id="closeBestFriendsMessages" type="button">Close 💖</button>
         </div>
     </dialog>
 
