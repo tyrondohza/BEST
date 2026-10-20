@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Best Friend</title>
+    <title>A Little Note for My Best Friend</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="pink">
@@ -21,18 +21,18 @@
     </div>
 
     <div class="scene">
-        <div class="card" id="examCard" aria-label="Open the exam card">
+        <div class="card" id="examCard" role="group" aria-label="Friendship card">
             <div class="card-inner">
-                <div class="card-face card-front">
+                <div class="card-face card-front" role="button" tabindex="0" aria-label="Open your friendship card" aria-pressed="false">
                     <div class="cover-pattern"></div>
                     <div class="floral floral-one"></div>
                     <div class="floral floral-two"></div>
                     <div class="floral floral-three"></div>
                     <div class="floral floral-four"></div>
                     <div class="cover-content">
-                        <span class="cover-label">To My Favorite Person</span>
+                        <span class="cover-label">A little note for my favorite person</span>
                         <h2>Open Me</h2>
-                        <p>Reveal your message</p>
+                        <p>Tap to reveal why we're friends</p>
                     </div>
                 </div>
 
@@ -43,25 +43,55 @@
                     <div class="corner corner-left"></div>
                     <div class="corner corner-right"></div>
 
-                    <div class="badge">For My Best Friend</div>
-                    <h1>Good Luck in Your Exams!</h1>
+                    <div class="badge">A few reasons you're my person</div>
+                    <h1>Why I'm Glad We're Friends</h1>
 
-                    <p class="message">
-                        My dear best friend, you have worked so hard, believed in yourself, and carried your dreams with so much courage.
-                        Now is the time to trust your preparation, stay calm, and let your brilliance speak for itself.
-                        I am so proud of you, and I know you are going to do amazing things.
-                    </p>
+                    <p class="message">There's a little box at the bottom with a reminder of how much I believe in you.</p>
 
                     <div class="hearts" aria-label="decorative hearts">♥ ♥ ♥</div>
 
-                    <div class="footer">
-                        <span>You’ve got this 💖</span>
-                        <span>Always cheering for you</span>
+                    <div class="outing-note">
+                        <span class="outing-label">One tiny favor...</span>
+                        <p>You owe me an outing somewhere nice—you're paying, and you must show up. 💅</p>
                     </div>
+
+                    <div class="footer">
+                        <span>Best friends, always 💖</span>
+                        <span>Love you lots</span>
+                    </div>
+
+                    <button class="friendship-box" id="openFriendshipMessages" type="button" aria-haspopup="dialog" aria-controls="friendshipDialog">
+                        Tap here for a little exam encouragement 💌
+                    </button>
                 </div>
             </div>
         </div>
+        <div class="card-actions" aria-label="Card actions">
+            <button class="action-btn celebrate-btn" id="celebrateButton" type="button">✨ Send some sparkle</button>
+            <button class="action-btn download-btn" id="downloadButton" type="button">↓ Download your card</button>
+        </div>
+        <p class="action-status" id="actionStatus" aria-live="polite"></p>
     </div>
+
+    <dialog class="friendship-dialog" id="friendshipDialog" aria-labelledby="friendshipDialogTitle">
+        <div class="friendship-dialog-content">
+            <p class="friendship-dialog-kicker">A little note before your exams</p>
+            <h2 id="friendshipDialogTitle">I Believe in You 💖</h2>
+            <div class="friendship-messages">
+                <p>You have worked so hard to get here. Trust everything you've learned and be proud of how far you've come. 🌟</p>
+                <p>Take a deep breath, take each question one at a time, and remember that you are capable of more than you know. 💪</p>
+                <p>I believe in you completely—not just because I know how smart you are, but because I have seen your determination. 💖</p>
+                <p>You don't have to be perfect. Just do your best, and take it one step at a time. 🌷</p>
+                <p>If a question feels tricky, pause, breathe, and come back to it. You've got this. 🧠</p>
+                <p>Your hard work matters, and all the effort you've put in has prepared you for this moment. ✨</p>
+                <p>Remember to get some rest, drink some water, and be kind to yourself. You deserve that care, too. 💧</p>
+                <p>One exam doesn't define you. Your courage, kindness, and determination are part of what makes you amazing. 🌈</p>
+                <p>Whatever happens, you can always count on me. I'm in your corner and cheering you on! 📣</p>
+                <p>No matter what, I'm already proud of you. You've got this, and I'll be cheering you on every step of the way! 🍀</p>
+            </div>
+            <button class="action-btn friendship-dialog-close" id="closeFriendshipMessages" type="button">Close 💖</button>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
